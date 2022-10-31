@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="EncryptRequest\**" />
+    <Compile Remove="PmtGateway\**" />
+    <EmbeddedResource Remove="EncryptRequest\**" />
+    <EmbeddedResource Remove="PmtGateway\**" />
+    <None Remove="EncryptRequest\**" />
+    <None Remove="PmtGateway\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Account\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.13" />
+    <PackageReference Include="Microsoft.Extensions.Features" Version="6.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HPPay.Infrastructure\HPPay.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

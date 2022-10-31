@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0006: Metadata file 'D:\SUJIT_WORK\SERVICES\DTPLUS_WEB_API\HPPay.DataRepository\bin\Debug\netcoreapp3.1\HPPay.DataRepository.dll' could not be found
+dotnet_diagnostic.CS0006.severity = none
