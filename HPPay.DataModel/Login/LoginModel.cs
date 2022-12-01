@@ -20,6 +20,7 @@ namespace HPPay.DataModel.Login
 
     public class GetLoginModelOutput : BaseClassOutput
     {
+
         [JsonProperty("LoginType")]
         [DataMember]
         public string LoginType { get; set; }

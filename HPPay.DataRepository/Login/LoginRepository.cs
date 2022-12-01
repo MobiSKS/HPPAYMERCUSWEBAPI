@@ -22,17 +22,17 @@ namespace HPPay.DataRepository.Login
 
         public async Task<IEnumerable<GetLoginModelOutput>> GetLogin([FromBody] GetLoginModelInput ObjClass)
         {
-            var procedureName = "UspGetUserLogin";
+            var procedureName = "UspGetUserLoginNew";
+            //var procedureName = "UspGetUserLogin";
+
             var parameters = new DynamicParameters();
             parameters.Add("Userid", ObjClass.Userid, DbType.String, ParameterDirection.Input);
             parameters.Add("Useragent", ObjClass.Useragent, DbType.String, ParameterDirection.Input);
             parameters.Add("Password", ObjClass.Password, DbType.String, ParameterDirection.Input);
             parameters.Add("DeviceId", ObjClass.DeviceId, DbType.String, ParameterDirection.Input);
             using var connection = _context.CreateConnection();
-            //return await connection.QueryAsync<GetLoginModelOutput>(procedureName, parameters, commandType: CommandType.StoredProcedure);
             var result = await connection.QueryAsync<GetLoginModelOutput>(procedureName, parameters, commandType: CommandType.StoredProcedure);
             StatusInformation.API_Key_Is_Null.GetDisplayName();
-            //bool IsResult = this.Return_Key(_accountRepo, out string UserMessage, 0, out int IntStatusCode, ObjClass.Useragent, ObjClass.Userip, ObjClass.Userid);
             string API_Key = string.Empty;
             string Secret_Key = string.Empty;
             byte[] bytes = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70 };
@@ -40,7 +40,6 @@ namespace HPPay.DataRepository.Login
             List<GetLoginModelOutput> ObjUserLogin = result.ToList();
             ObjUserLogin[0].Token = TokenManager.GenerateToken(ObjClass.Useragent, ObjClass.Userid, ObjClass.Userip);
             return ObjUserLogin;
-
         }
 
         public async Task<IEnumerable<GetMenuDetailsForUserModelOutput>> GetMenuDetailsForUser([FromBody] GetMenuDetailsForUserModelInput ObjClass)
@@ -65,7 +64,9 @@ namespace HPPay.DataRepository.Login
 
         public async Task<IEnumerable<ManageUsersTokenModelBaseOutput>> InsertUpdateManageUsersToken([FromBody] InsertUpdateManageUsersTokenModelInput ObjClass)
         {
-            var procedureName = "UspInsertUpdateManageUsersToken";
+            var procedureName = "UspInsertUpdateManageUsersTokenNew";
+            //var procedureName = "UspInsertUpdateManageUsersToken";
+
             var parameters = new DynamicParameters();
             parameters.Add("UserId", ObjClass.Userid, DbType.String, ParameterDirection.Input);
             parameters.Add("Token", ObjClass.Token, DbType.String, ParameterDirection.Input);
@@ -73,14 +74,6 @@ namespace HPPay.DataRepository.Login
             parameters.Add("UserIp", ObjClass.Userip, DbType.String, ParameterDirection.Input);
             using var connection = _context.CreateConnection();
             return await connection.QueryAsync<ManageUsersTokenModelBaseOutput>(procedureName, parameters, commandType: CommandType.StoredProcedure);
-
-            //var result = await connection.QueryMultipleAsync(procedureName, parameters, commandType: CommandType.StoredProcedure);
-            //var storedProcedureResult = new InsertUpdateManageUsersTokenModelOutput();
-            //List<ManageUsersTokenModelBaseOutput> manageUsersTokenModelBaseOutputs = new List<ManageUsersTokenModelBaseOutput>();
-            //manageUsersTokenModelBaseOutputs = (List<ManageUsersTokenModelBaseOutput>)await result.ReadAsync<ManageUsersTokenModelBaseOutput>();
-            //storedProcedureResult.ManageUsersTokenModelBaseOutput = manageUsersTokenModelBaseOutputs.FirstOrDefault();
-            //storedProcedureResult.MenuDetails = (List<MenuDetails>)await result.ReadAsync<MenuDetails>();
-            //return storedProcedureResult;
         }
 
         public async Task<CheckManageUsersTokenModelOutput> CheckManageUsersToken([FromBody] CheckManageUsersTokenModelInput ObjClass)
