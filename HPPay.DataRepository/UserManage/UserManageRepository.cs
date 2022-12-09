@@ -15,13 +15,9 @@ namespace HPPay.DataRepository.UserManage
     public class UserManageRepository : IUserManageRepository
     {
         private readonly DapperContext _context;
-        //private readonly IHostingEnvironment _hostingEnvironment;
-        //public UserManageRepository(DapperContext context, IHostingEnvironment hostingEnvironment) 
-        public UserManageRepository(DapperContext context)
+         public UserManageRepository(DapperContext context)
         {
             _context = context;
-            // _hostingEnvironment = hostingEnvironment;
-            //ObjVariable = new Variables(configuration);
         }
 
         public async Task<IEnumerable<GetUserRoleModelOutput>> SelectUserManageRolesRequest([FromBody] GetUserRoleModelInput ObjClass)
@@ -47,7 +43,8 @@ namespace HPPay.DataRepository.UserManage
 
         public async Task<IEnumerable<GetManageUsersModelOutput>> GetManageUsers(GetManageUsersModelInput objClass)
         {
-            var procedureName = "UspGetManageUsers";
+            //var procedureName = "UspGetManageUsers";
+            var procedureName = "UspGetManageUsersHPpay";
             var parameters = new DynamicParameters();
             parameters.Add("UserName", objClass.UserName, DbType.String, ParameterDirection.Input);
             parameters.Add("Email", objClass.Email, DbType.String, ParameterDirection.Input);
@@ -71,24 +68,9 @@ namespace HPPay.DataRepository.UserManage
 
         public async Task<IEnumerable<UserManagerAddUserModelOutput>> AddUser([FromBody] UserManagerAddUserModelInput ObjClass)
         {
-            //var dtDBR = new DataTable("TypeManageUsersAddUserRole");
-            //dtDBR.Columns.Add("ZO", typeof(int));
-            //dtDBR.Columns.Add("RO", typeof(int));
-
-
-            var procedureName = "UspAddUser";
+            //var procedureName = "UspAddUser";
+            var procedureName = "UspAddUserHPPay";
             var parameters = new DynamicParameters();
-
-            //foreach (TypeManageUsersAddUserRole objdtl in ObjClass.TypeManageUsersAddUserRole)
-            //{
-            //    DataRow dr = dtDBR.NewRow();
-            //    dr["ZO"] = objdtl.ZO;
-            //    dr["RO"] = objdtl.RO;
-
-            //    dtDBR.Rows.Add(dr);
-            //    dtDBR.AcceptChanges();
-            //}
-
 
             parameters.Add("UserName", ObjClass.UserName, DbType.String, ParameterDirection.Input);
             parameters.Add("Email", ObjClass.Email, DbType.String, ParameterDirection.Input);
@@ -97,16 +79,11 @@ namespace HPPay.DataRepository.UserManage
             parameters.Add("SecretQuestion", ObjClass.SecretQuestion, DbType.Int32, ParameterDirection.Input);
             parameters.Add("SecretQuestionAnswer", ObjClass.SecretQuestionAnswer, DbType.String, ParameterDirection.Input);
             parameters.Add("CreatedBy", ObjClass.CreatedBy, DbType.String, ParameterDirection.Input);
-            //parameters.Add("UserRole", ObjClass.UserRole, DbType.Int32, ParameterDirection.Input);
-            //parameters.Add("UserRole", ObjClass.UserRole, DbType.String, ParameterDirection.Input);
-            //parameters.Add("ModifiedBy", ObjClass.ModifiedBy, DbType.String, ParameterDirection.Input);
             parameters.Add("FirstName", ObjClass.FirstName, DbType.String, ParameterDirection.Input);
             parameters.Add("LastName", ObjClass.LastName, DbType.String, ParameterDirection.Input);
             parameters.Add("StateId", ObjClass.StateId, DbType.String, ParameterDirection.Input);
             parameters.Add("ActionType", ObjClass.ActionType, DbType.String, ParameterDirection.Input);
-
-            //parameters.Add("TypeManageUsersAddUserRole", dtDBR, DbType.Object, ParameterDirection.Input);
-
+            
             using var connection = _context.CreateConnection();
             return await connection.QueryAsync<UserManagerAddUserModelOutput>(procedureName, parameters, commandType: CommandType.StoredProcedure);
         }
@@ -181,7 +158,8 @@ namespace HPPay.DataRepository.UserManage
 
 
 
-            var procedureName = "[UspDeleteManageUsers]";
+            //var procedureName = "[UspDeleteManageUsers]";
+            var procedureName = "UspDeleteManageUsersHPPay";
             var parameters = new DynamicParameters();
 
             foreach (TypeDeleteUserManage objdtl in ObjClass.TypeDeleteUserManage)
@@ -202,7 +180,8 @@ namespace HPPay.DataRepository.UserManage
 
         public async Task<IEnumerable<UpdateManageUsersModelOutput>> UpdateManageUsers(UpdateManageUsersModelInput objClass)
         {
-            var procedureName = "UspUpdateManageUsers";
+            //var procedureName = "UspUpdateManageUsers";
+            var procedureName = "UspUpdateManageUsersHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("UserName", objClass.UserName, DbType.String, ParameterDirection.Input);
             parameters.Add("Actions", objClass.Actions, DbType.String, ParameterDirection.Input);
@@ -565,7 +544,8 @@ namespace HPPay.DataRepository.UserManage
 
         public async Task<IEnumerable<ManageEditUsersModelOutput>> ManageEditUsers(ManageEditUsersModelInput objClass)
         {
-            var procedureName = "UspManageEditUsers";
+            //var procedureName = "UspManageEditUsers";
+            var procedureName = "UspManageEditUsersHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("UserName", objClass.UserName, DbType.String, ParameterDirection.Input);
             using var connection = _context.CreateConnection();
@@ -600,14 +580,9 @@ namespace HPPay.DataRepository.UserManage
                 dr["RoleName"] = objdtl.RoleName;
                 dr["RoleDescription"] = objdtl.RoleDescription;
                 dr["ControlType"] = objdtl.ControlType;
-
-
-
                 dtDBR.Rows.Add(dr);
                 dtDBR.AcceptChanges();
             }
-
-
             parameters.Add("UserName", ObjClass.UserName, DbType.String, ParameterDirection.Input);
             parameters.Add("Email", ObjClass.Email, DbType.String, ParameterDirection.Input);
             parameters.Add("Password", ObjClass.Password, DbType.String, ParameterDirection.Input);
@@ -629,8 +604,6 @@ namespace HPPay.DataRepository.UserManage
             dtDBR.Columns.Add("ControlType", typeof(string));
             dtDBR.Columns.Add("StatusFlag", typeof(int));
 
-
-
             var procedureName = "UspUpdateAggregatorUserDetailsWithRoles";
             var parameters = new DynamicParameters();
 
@@ -641,7 +614,6 @@ namespace HPPay.DataRepository.UserManage
                 dr["RoleDescription"] = objdtl.RoleDescription;
                 dr["ControlType"] = objdtl.ControlType;
                 dr["StatusFlag"] = objdtl.StatusFlag;
-
 
                 dtDBR.Rows.Add(dr);
                 dtDBR.AcceptChanges();
@@ -690,7 +662,7 @@ namespace HPPay.DataRepository.UserManage
 
         public async Task<UserManageEditUserModelOutput> ManageEditUser([FromBody] UserManageEditUserModelInput ObjClass)
         {
-            var procedureName = "UspManageEditUser";
+            var procedureName = "UspManageEditUser";            
             var parameters = new DynamicParameters();
             parameters.Add("UserName", ObjClass.UserName, DbType.String, ParameterDirection.Input);
             using var connection = _context.CreateConnection();
@@ -718,14 +690,9 @@ namespace HPPay.DataRepository.UserManage
                 dr["ZO"] = objdtl.ZO;
                 dr["RO"] = objdtl.RO;
 
-
-
-
                 dtDBR.Rows.Add(dr);
                 dtDBR.AcceptChanges();
             }
-
-
             parameters.Add("Username", ObjClass.Username, DbType.String, ParameterDirection.Input);
             parameters.Add("RoleId", ObjClass.RoleId, DbType.String, ParameterDirection.Input);
             parameters.Add("TypeManageUsersAddUserRole", dtDBR, DbType.Object, ParameterDirection.Input);
