@@ -32,7 +32,7 @@ namespace HPPay.DataRepository.UserManage
 
         public async Task<IEnumerable<ResetPasswordUserManageModelOutput>> ResetPasswordUserManage([FromBody] ResetPasswordUserManageModelInput ObjClass)
         {
-            var procedureName = "UspResetPasswordUserManage";
+            var procedureName = "UspResetPasswordUserManageHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("UserName", ObjClass.UserName, DbType.String, ParameterDirection.Input);
             parameters.Add("ModifiedBy", ObjClass.ModifiedBy, DbType.String, ParameterDirection.Input);
@@ -192,7 +192,7 @@ namespace HPPay.DataRepository.UserManage
 
         public async Task<GetUserRolesAndRegionsModelOutput> GetUserRolesAndRegions([FromBody] GetUserRolesAndRegionsModelInput ObjClass)
         {
-            var procedureName = "UspGetUserRolesAndRegions";
+            var procedureName = "UspGetUserRolesAndRegionsHPPay";
             var parameters = new DynamicParameters();
             using var connection = _context.CreateConnection();
             var result = await connection.QueryMultipleAsync(procedureName, parameters, commandType: CommandType.StoredProcedure);
@@ -662,7 +662,7 @@ namespace HPPay.DataRepository.UserManage
 
         public async Task<UserManageEditUserModelOutput> ManageEditUser([FromBody] UserManageEditUserModelInput ObjClass)
         {
-            var procedureName = "UspManageEditUser";            
+            var procedureName = "UspManageEditUserHPPay";            
             var parameters = new DynamicParameters();
             parameters.Add("UserName", ObjClass.UserName, DbType.String, ParameterDirection.Input);
             using var connection = _context.CreateConnection();
