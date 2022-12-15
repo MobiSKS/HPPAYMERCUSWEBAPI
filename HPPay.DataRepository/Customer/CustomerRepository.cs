@@ -101,7 +101,7 @@ namespace HPPay.DataRepository.Customer
 
         public async Task<IEnumerable<GetCustomerSecretQuestionModelOutput>> GetSecretQuestion([FromBody] GetCustomerSecretQuestionModelInput ObjClass)
         {
-            var procedureName = "UspGetSecretQuestion";
+            var procedureName = "UspGetSecretQuestionHPPay";
             using var connection = _context.CreateConnection();
             return await connection.QueryAsync<GetCustomerSecretQuestionModelOutput>(procedureName, null, commandType: CommandType.StoredProcedure);
         }
