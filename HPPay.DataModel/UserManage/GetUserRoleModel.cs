@@ -15,7 +15,7 @@ namespace HPPay.DataModel.UserManage
     {
         [JsonProperty("ID")]
         [DataMember]
-        public string ID { get; set; }
+        public string RoleID { get; set; }
 
         [JsonProperty("RoleName")]
         [DataMember]

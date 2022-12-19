@@ -51,7 +51,7 @@ namespace HPPay.DataRepository.Officer
 
         public async Task<IEnumerable<GetOfficerModelOutput>> GetOfficerDetail([FromBody] GetOfficerModelInput ObjClass)
         {
-            var procedureName = "UspGetOfficerDetail";
+            var procedureName = "UspGetOfficerDetailHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("OfficerType", ObjClass.OfficerType, DbType.Int32, ParameterDirection.Input);
             parameters.Add("Location", ObjClass.Location, DbType.Int32, ParameterDirection.Input);
@@ -61,7 +61,7 @@ namespace HPPay.DataRepository.Officer
 
         public async Task<IEnumerable<OfficerUpdateModelOutput>> UpdateOfficer([FromBody] OfficerUpdateModelInput ObjClass)
         {
-            var procedureName = "UspUpdateOfficer";
+            var procedureName = "UspUpdateOfficerHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("FirstName", ObjClass.FirstName, DbType.String, ParameterDirection.Input);
             parameters.Add("LastName", ObjClass.LastName, DbType.String, ParameterDirection.Input);
@@ -115,7 +115,7 @@ namespace HPPay.DataRepository.Officer
 
         public async Task<IEnumerable<OfficerLocationMappingModelOutput>> InsertOfficerLocationMapping([FromBody] OfficerLocationMappingModelInput ObjClass)
         {
-            var procedureName = "UspInsertOfficerLocationMapping";
+            var procedureName = "UspInsertOfficerLocationMappingHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("OfficerId", ObjClass.OfficerId, DbType.Int32, ParameterDirection.Input);
             //parameters.Add("UserName", ObjClass.UserName, DbType.String, ParameterDirection.Input);
@@ -129,7 +129,7 @@ namespace HPPay.DataRepository.Officer
 
         public async Task<IEnumerable<OfficerDeleteLocationMappingModelOutput>> DeleteOfficerLocationMapping([FromBody] OfficerDeleteLocationMappingModelInput ObjClass)
         {
-            var procedureName = "UspInactiveOfficerLocationMapping";
+            var procedureName = "UspInactiveOfficerLocationMappingHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("UserName", ObjClass.UserName, DbType.String, ParameterDirection.Input);
             parameters.Add("ZO", ObjClass.ZO, DbType.Int32, ParameterDirection.Input);
@@ -141,7 +141,7 @@ namespace HPPay.DataRepository.Officer
 
         public async Task<IEnumerable<GetOfficerModelOutput>> BindOfficer([FromBody] BindOfficerModelInput ObjClass)
         {
-            var procedureName = "UspBindOfficerDetail";
+            var procedureName = "UspBindOfficerDetailHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("OfficerID", ObjClass.OfficerID, DbType.Int32, ParameterDirection.Input);
             using var connection = _context.CreateConnection();
@@ -168,7 +168,7 @@ namespace HPPay.DataRepository.Officer
 
         public async Task<IEnumerable<GetOfficerLocationMappingModelOutput>> GetOfficerLocationMapping([FromBody] BindOfficerModelInput ObjClass)
         {
-            var procedureName = "UspGetOfficerLocationMapping";
+            var procedureName = "UspGetOfficerLocationMappingHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("OfficerID", ObjClass.OfficerID, DbType.Int32, ParameterDirection.Input);
             using var connection = _context.CreateConnection();
@@ -178,7 +178,7 @@ namespace HPPay.DataRepository.Officer
 
         public async Task<IEnumerable<GetOfficerDetailModelOutput>> GetOfficerDetailByLocation([FromBody] GetOfficerDetailModelInput ObjClass)
         {
-            var procedureName = "UspGetOfficerDetails";
+            var procedureName = "UspGetOfficerDetailsHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("ZO", ObjClass.ZO, DbType.String, ParameterDirection.Input);
             parameters.Add("RO", ObjClass.RO, DbType.String, ParameterDirection.Input);
