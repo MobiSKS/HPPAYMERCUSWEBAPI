@@ -87,7 +87,7 @@ namespace HPPay.DataRepository.Officer
 
         public async Task<IEnumerable<DeleteOfficerModelOutput>> DeleteOfficer([FromBody] DeleteOfficerModelInput ObjClass)
         {
-            var procedureName = "UspInactiveOfficer";
+            var procedureName = "UspInactiveOfficerHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("OfficerId", ObjClass.OfficerId, DbType.Int32, ParameterDirection.Input);
             parameters.Add("ModifiedBy", ObjClass.ModifiedBy, DbType.String, ParameterDirection.Input);
@@ -97,7 +97,7 @@ namespace HPPay.DataRepository.Officer
 
         public async Task<IEnumerable<CheckOfficerModelOutput>> ChkUserName([FromBody] CheckOfficerModelInput ObjClass)
         {
-            var procedureName = "UspChkUserName";
+            var procedureName = "UspChkUserNameHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("UserName", ObjClass.UserName, DbType.String, ParameterDirection.Input);
             using var connection = _context.CreateConnection();
@@ -106,7 +106,7 @@ namespace HPPay.DataRepository.Officer
 
         public async Task<IEnumerable<ChkUserNameForLoginModelOutput>> ChkUserNameForLogin([FromBody] ChkUserNameForLoginModelInput ObjClass)
         {
-            var procedureName = "UspChkUserNameForLogin";
+            var procedureName = "UspChkUserNameForLoginHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("UserName", ObjClass.UserName, DbType.String, ParameterDirection.Input);
             using var connection = _context.CreateConnection();
@@ -158,7 +158,7 @@ namespace HPPay.DataRepository.Officer
 
         public async Task<IEnumerable<GetOfficerTypeModelOutput>> GetOfficerType([FromBody] GetOfficerTypeModelInput ObjClass)
         {
-            var procedureName = "UspGetOfficerType";
+            var procedureName = "UspGetOfficerTypeHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("OfficerSubTypeId", ObjClass.OfficerSubTypeId, DbType.Int32, ParameterDirection.Input);
             using var connection = _context.CreateConnection();
