@@ -16,7 +16,7 @@ using HPPay_WebApi.ExtensionMethod;
 namespace HPPay_WebApi.Controllers
 {
 
-    [Route("api/dtplus")]
+    [Route("api/hppay")]
     [ApiController]
     public class AccountController : ControllerBase
     {

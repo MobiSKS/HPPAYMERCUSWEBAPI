@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/city")]
+    [Route("api/hppay/city")]
     [ApiController]
     public class CityController : ControllerBase
     {

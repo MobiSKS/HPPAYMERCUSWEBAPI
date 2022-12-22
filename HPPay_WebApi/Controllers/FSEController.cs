@@ -17,7 +17,7 @@ using static HPPay.Infrastructure.CommonClass.StatusMessage;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/FSE")]
+    [Route("api/hppay/FSE")]
     [ApiController]
     public class FSEController : ControllerBase
     {

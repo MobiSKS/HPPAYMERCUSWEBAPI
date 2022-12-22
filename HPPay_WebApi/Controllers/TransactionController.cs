@@ -21,7 +21,7 @@ using static AtallaHSM.Common.LoggerUtility;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/transaction")]
+    [Route("/api/hppay/transaction")]
 
     //int i = 0;
     //while (i == 0)

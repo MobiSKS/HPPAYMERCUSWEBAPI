@@ -13,7 +13,7 @@ using static HPPay.DataModel.Hotlist.HotlistUpdatePermanentlyHotlistCardsModel;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/hotlist")]
+    [Route("api/hppay/hotlist")]
     [ApiController]
     public class HotlistController : ControllerBase
     {

@@ -25,7 +25,7 @@ using HPPay.DataModel.Transaction;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/Stfc")]
+    [Route("api/hppay/Stfc")]
     [ApiController]
     public class STFCController : ControllerBase
     {

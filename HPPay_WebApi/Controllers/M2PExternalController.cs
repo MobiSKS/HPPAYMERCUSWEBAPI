@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/M2P")]
+    [Route("api/hppay/M2P")]
     [ApiController]
     public class M2PExternalController : ControllerBase
     {

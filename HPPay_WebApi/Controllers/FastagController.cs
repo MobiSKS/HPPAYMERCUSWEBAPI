@@ -22,7 +22,7 @@ using HPPay.DataModel;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/Fastag")]
+    [Route("api/hppay/Fastag")]
     [ApiController]
     public class FastagController : ControllerBase
     {

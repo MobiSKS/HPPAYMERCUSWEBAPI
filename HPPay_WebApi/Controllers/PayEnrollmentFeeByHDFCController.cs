@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/PayEnrolmentFee")]
+    [Route("api/hppay/PayEnrolmentFee")]
     [ApiController]
     public class PayEnrollmentFeeByHDFCController : ControllerBase
     {

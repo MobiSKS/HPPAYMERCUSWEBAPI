@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/Mobile")]
+    [Route("api/hppay/Mobile")]
     [ApiController]
     public class MobilePaymentGatewayController : ControllerBase
     {

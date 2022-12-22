@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/COMCO")]
+    [Route("api/hppay/COMCO")]
     [ApiController]
     public class COMCOController : ControllerBase
     {

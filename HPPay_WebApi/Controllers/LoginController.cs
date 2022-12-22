@@ -18,7 +18,7 @@ using static HPPay.Infrastructure.CommonClass.StatusMessage;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/login")]
+    [Route("/api/hppay/login")]
     public class LoginController : ControllerBase
     {
         private readonly ILogger<LoginController> _logger;

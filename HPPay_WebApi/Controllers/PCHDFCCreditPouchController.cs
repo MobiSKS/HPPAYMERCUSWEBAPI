@@ -22,7 +22,7 @@ using static HPPay_WebApi.ActionFilters.LoggingFilterAttribute;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/PCHDFCCreditPouch")]
+    [Route("/api/hppay/PCHDFCCreditPouch")]
     public class PCHDFCCreditPouchController : ControllerBase
     {
         private readonly ILogger<PCHDFCCreditPouchController> _logger;

@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/ICICI")]
+    [Route("api/hppay/ICICI")]
     [ApiController]
     public class ICICIController : ControllerBase
     {

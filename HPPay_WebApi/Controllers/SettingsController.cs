@@ -24,7 +24,7 @@ namespace HPPay_WebApi.Controllers
 {
 
     [ApiController]
-    [Route("/api/dtplus/settings")]
+    [Route("/api/hppay/settings")]
     public class SettingsController : ControllerBase
     {
         private readonly ILogger<SettingsController> _logger;

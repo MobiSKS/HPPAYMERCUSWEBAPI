@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/dealercredit")]
+    [Route("api/hppay/dealercredit")]
     [ApiController]
     public class DealerCreditManageController : ControllerBase
     {

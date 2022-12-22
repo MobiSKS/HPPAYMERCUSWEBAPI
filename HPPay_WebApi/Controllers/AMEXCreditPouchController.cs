@@ -25,7 +25,7 @@ using System.Threading.Tasks;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/AMEXCreditPouch")]
+    [Route("/api/hppay/AMEXCreditPouch")]
     public class AMEXCreditPouchController : ControllerBase
     {
         private readonly ILogger<AMEXCreditPouchController> _logger;

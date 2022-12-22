@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/ISurePay")]
+    [Route("api/hppay/ISurePay")]
     [ApiController]
     public class ISurePayController : ControllerBase
     {

@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/dtp")]
+    [Route("/api/hppay/dtp")]
     public class DTPController : ControllerBase
     {
         private readonly ILogger<DTPController> _logger;

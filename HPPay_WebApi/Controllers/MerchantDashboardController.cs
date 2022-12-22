@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/merchantdashboard")]
+    [Route("api/hppay/merchantdashboard")]
     [ApiController]
     public class MerchantDashboardController : ControllerBase
     {

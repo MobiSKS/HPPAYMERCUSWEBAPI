@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/countryregion")]
+    [Route("api/hppay/countryregion")]
     [ApiController]
     public class CountryRegionController : ControllerBase
     {

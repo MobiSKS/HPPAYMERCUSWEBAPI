@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/SadakKeSathi")]
+    [Route("api/hppay/SadakKeSathi")]
     [ApiController]
     public class SadakKeSathiController : ControllerBase
     {

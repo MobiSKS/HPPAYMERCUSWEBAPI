@@ -16,7 +16,7 @@ using Microsoft.Extensions.Configuration;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/UserManage")]
+    [Route("/api/hppay/UserManage")]
     public class UserManageController : ControllerBase
     {
         private readonly ILogger<UserManageController> _logger;

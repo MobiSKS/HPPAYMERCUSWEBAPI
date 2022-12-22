@@ -13,7 +13,7 @@ using HPPay.DataRepository;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/customerdashboard")]
+    [Route("/api/hppay/customerdashboard")]
     public class CustomerDashboardController : ControllerBase
     {
         private readonly ILogger<CustomerDashboardController> _logger;

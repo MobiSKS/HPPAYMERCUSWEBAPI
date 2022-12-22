@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/IVR")]
+    [Route("/api/hppay/IVR")]
     public class IVRController : Controller
     {
         private readonly ILogger<IVRController> _logger;

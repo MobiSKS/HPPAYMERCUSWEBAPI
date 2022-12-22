@@ -15,7 +15,7 @@ using System;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/loyaltyredemption")]
+    [Route("/api/hppay/loyaltyredemption")]
 
     public class LoyaltyRedemptionController  : ControllerBase
     {

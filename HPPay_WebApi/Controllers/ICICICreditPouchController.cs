@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/ICICICreditPouch")]
+    [Route("/api/hppay/ICICICreditPouch")]
     public class ICICICreditPouchController : ControllerBase
     {
         private readonly ILogger<ICICICreditPouchController> _logger;

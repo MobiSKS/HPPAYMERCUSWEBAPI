@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/RBE")]
+    [Route("api/hppay/RBE")]
     [ApiController]
     public class RBEController : ControllerBase
     {

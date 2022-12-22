@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/configure")]
+    [Route("api/hppay/configure")]
     [ApiController]
     public class ConfigureAlertController : ControllerBase
     {

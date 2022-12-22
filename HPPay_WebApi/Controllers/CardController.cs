@@ -21,7 +21,7 @@ using System.Threading.Tasks;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/card")]
+    [Route("/api/hppay/card")]
     public class CardController : ControllerBase
     {
         private readonly ILogger<CardController> _logger;

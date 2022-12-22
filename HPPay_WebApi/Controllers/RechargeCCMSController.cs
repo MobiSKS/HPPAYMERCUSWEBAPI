@@ -23,7 +23,7 @@ using System.Threading.Tasks;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/RechargeCCMS")]
+    [Route("/api/hppay/RechargeCCMS")]
     public class RechargeCCMSController : ControllerBase
     {
         private readonly ILogger<RechargeCCMSController> _logger;

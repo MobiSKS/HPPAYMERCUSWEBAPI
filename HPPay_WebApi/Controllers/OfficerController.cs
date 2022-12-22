@@ -16,7 +16,7 @@ namespace HPPay_WebApi.Controllers
 {
 
     [ApiController]
-    [Route("/api/dtplus/officer")]
+    [Route("/api/hppay/officer")]
     public class OfficerController : ControllerBase
     {
         private readonly ILogger<OfficerController> _logger;

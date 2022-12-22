@@ -14,7 +14,7 @@ using HPPay.DataRepository.AdvanceSearch;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/advancesearch")]
+    [Route("/api/hppay/advancesearch")]
     public class AdvanceSearchController : ControllerBase
     {
         private readonly ILogger<AdvanceSearchController> _logger;

@@ -14,7 +14,7 @@ using System;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/driver")]
+    [Route("api/hppay/driver")]
     [ApiController]
     public class DriverController : ControllerBase
     {

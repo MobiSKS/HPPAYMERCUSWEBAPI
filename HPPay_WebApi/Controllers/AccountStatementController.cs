@@ -12,7 +12,7 @@ using HPPay.DataModel.AccountStatment;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/AccountStatement")]
+    [Route("/api/hppay/AccountStatement")]
     public class AccountStatementController : ControllerBase
     {
         private readonly ILogger<AccountStatementController> _logger;

@@ -14,7 +14,7 @@ using HPPay.DataRepository;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/modashboard")]
+    [Route("/api/hppay/modashboard")]
     public class MODashboardController : ControllerBase
     {
         private readonly ILogger<MODashboardController> _logger;

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/Infinity")]
+    [Route("api/hppay/Infinity")]
     [ApiController]
     public class InfinityController : ControllerBase
     {

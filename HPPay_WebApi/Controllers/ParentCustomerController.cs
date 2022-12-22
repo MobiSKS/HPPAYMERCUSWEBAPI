@@ -15,7 +15,7 @@ using System;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/ParentCustomer")]
+    [Route("/api/hppay/ParentCustomer")]
     public class ParentCustomerController : ControllerBase
     {
         private readonly ILogger<ParentCustomerController> _logger;

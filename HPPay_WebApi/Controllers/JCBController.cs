@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("/api/dtplus/JCB")]
+    [Route("/api/hppay/JCB")]
     [ApiController]
     public class JCBController : ControllerBase
     {

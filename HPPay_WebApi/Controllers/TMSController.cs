@@ -24,7 +24,7 @@ using HPPay.Infrastructure.CommonClass;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/TMS")]
+    [Route("/api/hppay/TMS")]
     public class TMSController : Controller
     {
         private readonly ILogger<TMSController> _logger;

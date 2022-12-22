@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("/api/dtplus/DICV")]
+    [Route("/api/hppay/DICV")]
     [ApiController]
     public class DICVController : ControllerBase
     {

@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/tapandpay")]
+    [Route("/api/hppay/tapandpay")]
     public class FastlaneIntegrationController : Controller
     {
         private readonly ILogger<FastlaneIntegrationController> _logger;

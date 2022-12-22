@@ -13,7 +13,7 @@ using System.Collections.Generic;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/aggregatorcustomer")]
+    [Route("/api/hppay/aggregatorcustomer")]
     public class AggregatorCustomerController : Controller
     {
         private readonly ILogger<AggregatorCustomerController> _logger;

@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/PGHDFC")]
+    [Route("api/hppay/PGHDFC")]
     [ApiController]
     public class PGHDFCController : ControllerBase
     {

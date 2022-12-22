@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/IMPS")]
+    [Route("api/hppay/IMPS")]
     [ApiController]
     public class IMPSController : ControllerBase
     {

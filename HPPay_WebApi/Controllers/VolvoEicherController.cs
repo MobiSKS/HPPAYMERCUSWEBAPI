@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("/api/dtplus/VE")]
+    [Route("/api/hppay/VE")]
     [ApiController]
     public class VolvoEicherController : ControllerBase
     {

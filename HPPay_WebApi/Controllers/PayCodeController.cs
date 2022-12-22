@@ -23,7 +23,7 @@ using static AtallaHSM.Common.LoggerUtility;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/paycode")]
+    [Route("/api/hppay/paycode")]
     public class PayCodeController : ControllerBase
     {
         private readonly ILogger<PayCodeController> _logger;

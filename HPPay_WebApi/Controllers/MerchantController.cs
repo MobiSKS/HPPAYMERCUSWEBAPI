@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/merchant")]
+    [Route("api/hppay/merchant")]
     [ApiController]
 
     public class MerchantController : ControllerBase

@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace HPPay_WebApi.Controllers
 {
-    [Route("api/dtplus/PayU")]
+    [Route("api/hppay/PayU")]
     [ApiController]
     public class PayUController : ControllerBase
     {

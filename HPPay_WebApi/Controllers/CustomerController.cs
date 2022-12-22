@@ -17,7 +17,7 @@ namespace HPPay_WebApi.Controllers
 {
 
     [ApiController]
-    [Route("/api/dtplus/customer")]
+    [Route("/api/hppay/customer")]
     public class CustomerController : ControllerBase
     {
         private readonly ILogger<CustomerController> _logger;

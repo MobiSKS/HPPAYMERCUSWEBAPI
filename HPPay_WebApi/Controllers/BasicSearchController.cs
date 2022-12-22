@@ -21,7 +21,7 @@ using static HPPay.DataModel.BasicSearchByCard.BasicSearchByModelCard;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/basicsearch")]
+    [Route("/api/hppay/basicsearch")]
     public class BasicSearchController : ControllerBase
     {
         private readonly ILogger<BasicSearchController> _logger;

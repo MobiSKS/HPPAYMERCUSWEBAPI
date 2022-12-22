@@ -18,7 +18,7 @@ using HPPay.DataModel.CustomerRelationship;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/CustomerRelationship")]
+    [Route("/api/hppay/CustomerRelationship")]
     public class CustomerRelationshipController : ControllerBase
     {
         private readonly ILogger<CustomerRelationshipController> _logger;

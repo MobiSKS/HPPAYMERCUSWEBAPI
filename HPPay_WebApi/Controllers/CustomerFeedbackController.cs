@@ -11,7 +11,7 @@ using System.Linq;
 namespace HPPay_WebApi.Controllers
 {
     [ApiController]
-    [Route("/api/dtplus/customerfeedback")]
+    [Route("/api/hppay/customerfeedback")]
     public class CustomerFeedbackController : Controller
     {
 
