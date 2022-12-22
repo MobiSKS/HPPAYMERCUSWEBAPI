@@ -18,7 +18,7 @@ namespace HPPay.DataRepository.District
 
         public async Task<IEnumerable<GetDistrictModelOutput>> GetDistrict([FromBody] GetDistrictModelInput ObjClass)
         {
-            var procedureName = "UspGetDistrict";
+            var procedureName = "UspGetDistrictHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("StateID", ObjClass.StateID, DbType.Int32, ParameterDirection.Input);
             using var connection = _context.CreateConnection();
@@ -27,7 +27,7 @@ namespace HPPay.DataRepository.District
 
         public async Task<IEnumerable<DeleteDistrictModelOutput>> DeleteDistrict([FromBody] DeleteDistrictModelInput ObjClass)
         {
-            var procedureName = "UspInactiveDistrict";
+            var procedureName = "UspInactiveDistrictHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("DistrictID", ObjClass.DistrictID, DbType.Int32, ParameterDirection.Input);
             parameters.Add("ModifiedBy", ObjClass.ModifiedBy, DbType.String, ParameterDirection.Input);

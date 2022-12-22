@@ -18,7 +18,7 @@ namespace HPPay.DataRepository.State
 
         public async Task<IEnumerable<GetStateModelOutput>> GetState([FromBody] GetStateModelInput ObjClass)
         {
-            var procedureName = "UspGetState";
+            var procedureName = "UspGetStateHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("CountryID", ObjClass.CountryID, DbType.Int32, ParameterDirection.Input);
             using var connection = _context.CreateConnection();
@@ -28,7 +28,7 @@ namespace HPPay.DataRepository.State
 
         public async Task<IEnumerable<DeleteStateModelOutput>> DeleteState([FromBody] DeleteStateModelInput ObjClass)
         {
-            var procedureName = "UspInactiveState";
+            var procedureName = "UspInactiveStateHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("StateID", ObjClass.StateID, DbType.Int32, ParameterDirection.Input);
             parameters.Add("ModifiedBy", ObjClass.ModifiedBy, DbType.String, ParameterDirection.Input);

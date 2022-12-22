@@ -18,7 +18,7 @@ namespace HPPay.DataRepository.City
 
         public async Task<IEnumerable<GetCityModelOutput>> GetCity([FromBody] GetCityModelInput ObjClass)
         {
-            var procedureName = "UspGetCity";
+            var procedureName = "UspGetCityHPPay";
             using var connection = _context.CreateConnection();
             return await connection.QueryAsync<GetCityModelOutput>(procedureName, null, commandType: CommandType.StoredProcedure);
 
@@ -26,7 +26,7 @@ namespace HPPay.DataRepository.City
 
         public async Task<IEnumerable<DeleteCityModelOutput>> DeleteCity([FromBody] DeleteCityModelInput ObjClass)
         {
-            var procedureName = "UspInactiveCity";
+            var procedureName = "UspInactiveCityHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("CityID", ObjClass.CityID, DbType.Int32, ParameterDirection.Input);
             parameters.Add("ModifiedBy", ObjClass.ModifiedBy, DbType.String, ParameterDirection.Input);

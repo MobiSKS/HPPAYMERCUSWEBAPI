@@ -18,7 +18,7 @@ namespace HPPay.DataRepository.ZonalOffice
 
         public async Task<IEnumerable<GetZonalOfficeModelOutput>> GetZonalOffice([FromBody] GetZonalOfficeModelInput ObjClass)
         {
-            var procedureName = "UspGetZonalOffice";
+            var procedureName = "UspGetZonalOfficeHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("SBUTypeId", ObjClass.SBUTypeId, DbType.Int32, ParameterDirection.Input);
             using var connection = _context.CreateConnection();
@@ -27,7 +27,7 @@ namespace HPPay.DataRepository.ZonalOffice
 
         public async Task<IEnumerable<DeleteZonalOfficeModelOutput>> DeleteZonalOffice([FromBody] DeleteZonalOfficeModelInput ObjClass)
         {
-            var procedureName = "UspInactiveZonalOffice";
+            var procedureName = "UspInactiveZonalOfficeHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("ZonalOfficeID", ObjClass.ZonalOfficeID, DbType.Int32, ParameterDirection.Input);
             parameters.Add("ModifiedBy", ObjClass.ModifiedBy, DbType.String, ParameterDirection.Input);

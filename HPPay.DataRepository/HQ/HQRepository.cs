@@ -19,7 +19,7 @@ namespace HPPay.DataRepository.HQ
 
         public async Task<IEnumerable<InsertHQModelOutput>> InsertHQ([FromBody] InsertHQModelInput ObjClass)
         {
-            var procedureName = "UspInsertHQ";
+            var procedureName = "UspInsertHeadOfficerHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("HQCode", ObjClass.HQCode, DbType.String, ParameterDirection.Input);
             parameters.Add("HQName", ObjClass.HQName, DbType.String, ParameterDirection.Input);
@@ -31,14 +31,14 @@ namespace HPPay.DataRepository.HQ
 
         public async Task<IEnumerable<GetHQModelOutput>> GetHQ([FromBody] GetHQModelInput ObjClass)
         {
-            var procedureName = "UspGetHQ";
+            var procedureName = "UspGetHeadofficesHPPay";
             using var connection = _context.CreateConnection();
             return await connection.QueryAsync<GetHQModelOutput>(procedureName, null, commandType: CommandType.StoredProcedure);
         }
 
         public async Task<IEnumerable<UpdateHQModelOutput>> UpdateHQ([FromBody] UpdateHQModelInput ObjClass)
         {
-            var procedureName = "UspUpdateHQ";
+            var procedureName = "UspUpdateHeadofficeHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("HQID", ObjClass.HQID, DbType.Int32, ParameterDirection.Input);
             parameters.Add("HQCode", ObjClass.HQCode, DbType.String, ParameterDirection.Input);
