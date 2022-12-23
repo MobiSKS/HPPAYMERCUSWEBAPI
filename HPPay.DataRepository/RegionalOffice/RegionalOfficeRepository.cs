@@ -37,7 +37,7 @@ namespace HPPay.DataRepository.RegionalOffice
 
         public async Task<IEnumerable<GetRegionalOfficeModelOutput>> GetRegionalOfficeByMultipleZone([FromBody] GetRegionalOfficebyMultipleZoneModelInput ObjClass)
         {
-            var procedureName = "UspGetRegionalOfficeByMultipleZone";
+            var procedureName = "UspGetRegionalOfficeByMultipleZoneHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("ZonalID", ObjClass.ZonalID, DbType.String, ParameterDirection.Input);
             using var connection = _context.CreateConnection();

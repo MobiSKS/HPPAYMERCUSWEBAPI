@@ -37,7 +37,7 @@ namespace HPPay.DataRepository.District
 
         public async Task<IEnumerable<GetDistrictModelOutput>> GetDistrictByMultipleStateID([FromBody] GetDistrictByMultipleStateIDModelInput ObjClass)
         {
-            var procedureName = "UspGetDistrictByMultipleState";
+            var procedureName = "UspGetDistrictByMultipleStateHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("StateID", ObjClass.StateID, DbType.String, ParameterDirection.Input);
             using var connection = _context.CreateConnection();

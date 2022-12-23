@@ -51,7 +51,7 @@ namespace HPPay.DataRepository.HQ
 
         public async Task<IEnumerable<DeleteHQModelOutput>> DeleteHQ([FromBody] DeleteHQModelInput ObjClass)
         {
-            var procedureName = "UspInactiveHQ";
+            var procedureName = "UspInactiveHOHPPay";
             var parameters = new DynamicParameters();
             parameters.Add("HQID", ObjClass.HQID, DbType.Int32, ParameterDirection.Input);
             parameters.Add("ModifiedBy", ObjClass.ModifiedBy, DbType.String, ParameterDirection.Input);
