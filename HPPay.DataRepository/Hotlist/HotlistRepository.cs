@@ -1,13 +1,11 @@
 ﻿using Dapper;
-using HPCL.DataModel.Hotlist;
-using HPCL.DataRepository.DBDapper;
 using HPPay.DataModel.Hotlist;
+using HPPay.DataRepository.DBDapper;
 using HPPay.DataRepository.Hotlist;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 using System.Web.Http;
-using static HPCL.DataModel.Hotlist.HotlistUpdatePermanentlyHotlistCardsModel;
 using static HPPay.DataModel.Hotlist.HotlistUpdatePermanentlyHotlistCardsModel;
 
 namespace HPCL.DataRepository.Hotlist
