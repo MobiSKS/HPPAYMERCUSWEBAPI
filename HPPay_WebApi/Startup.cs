@@ -88,6 +88,7 @@ using System.Reflection;
 using HPPay.DataRepository.CustomerRelationship;
 using HPPay.DataRepository.IVR;
 using HPPay.DataRepository.PayU;
+using HPCL.DataRepository.Hotlist;
 
 namespace HPPay_WebApi
 {
