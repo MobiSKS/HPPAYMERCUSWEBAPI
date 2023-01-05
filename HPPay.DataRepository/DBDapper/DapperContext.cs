@@ -51,15 +51,6 @@ namespace HPPay.DataRepository.DBDapper
             return db.Query<T>(sp, parms, commandType: commandType).FirstOrDefault();
         }
 
-        //public async Task<IEnumerable<T>>  GetAsync<T>(string sp, DynamicParameters parms, CommandType commandType = CommandType.Text)
-        //{
-        //    IEnumerable<T> result;
-        //    using IDbConnection db = new SqlConnection(_configuration.GetConnectionString(_connectionString));
-        //    result= await  db.QueryAsync<IEnumerable<T>>(sp, parms, commandType: commandType);
-        //    result.FirstOrDefault();
-        //    return result;
-        //}
-
         public List<T> GetAll<T>(string sp, DynamicParameters parms, CommandType commandType = CommandType.StoredProcedure)
         {
             using IDbConnection db = new SqlConnection(_configuration.GetConnectionString(_connectionString));

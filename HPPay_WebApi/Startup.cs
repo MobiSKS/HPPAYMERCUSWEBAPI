@@ -85,25 +85,6 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.IO;
 using System.Reflection;
-using HPPay.DataRepository.HLFL;
-using HPPay.DataRepository.IciciAPI;
-using HPPay.DataRepository.M2PAPI;
-using HPPay.DataRepository;
-using HPPay.DataRepository.MerchantDashboard;
-using HPPay.DataRepository.CommonRequests;
-using HPPay.DataRepository.PayCode;
-using HPPay.DataRepository.AdvanceSearch;
-using HPPay.DataRepository.STFC;
-using HPPay.DataRepository.SMSGetSend;
-using HPPay.DataRepository.AGS;
-using HPPay.DataRepository.CustomerFeedbackRepository;
-using HPPay.DataRepository.HDFCPG;
-using HPPay.DataRepository.PayEnrollmentFee;
-using HPPay.DataRepository.LoyaltyRedemption;
-using HPPay.DataRepository.MobilePaymentGateway;
-using HPPay.DataRepository.SadakKeSathi;
-using HPPay.DataRepository.FSE;
-using HPPay.DataRepository.EGVAPI;
 using HPPay.DataRepository.CustomerRelationship;
 using HPPay.DataRepository.IVR;
 using HPPay.DataRepository.PayU;
@@ -120,14 +101,7 @@ namespace HPPay_WebApi
         }
 
         public IConfiguration Configuration { get; }
-
-        //public static IWebHostBuilder CreateWebHostBuilder(string[] args) => WebHost.CreateDefaultBuilder(args)
-        //.UseStartup<Startup>()
-        //.UseKestrel(options =>
-        //{
-        //    options.Limits.MaxRequestBodySize = 209715200;
-        //});
-
+        
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -177,12 +151,6 @@ namespace HPPay_WebApi
                 options.Cookie.IsEssential = true;
             });
 
-            //services.add
-            //services.AddEntityFramework()
-            //Register dapper in scope
-            //services.AddDbContext<HPPayAppContext>(options =>
-            //options.UseSqlServer(Configuration.GetConnectionString("HPPayConnectionString")));
-            //services.AddSingleton<_IDapperContext, DapperContext>();
             services.AddSingleton<DapperContext>();
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<ISettingsRepository, SettingsRepository>();
@@ -306,17 +274,7 @@ namespace HPPay_WebApi
              });
 
             services.AddControllers().AddNewtonsoftJson();
-            //services.Configure<KestrelServerOptions>(options =>
-            //{
-            //    options.AllowSynchronousIO = true;
-            //});
-
-            // If using IIS:
-            //services.Configure<IISServerOptions>(options =>
-            //{
-            //    options.AllowSynchronousIO = true;
-            //});
-
+            
             //services.AddSwaggerGen();
             services.AddSwaggerGen(options =>
             {
@@ -333,20 +291,7 @@ namespace HPPay_WebApi
                 options.IncludeXmlComments(xmlPath);
             });
 
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
-
-            //        var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-            //    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-            //    c.IncludeXmlComments(xmlPath);
-            //});
-
-            //services.Configure<FormOptions>(x =>
-            //{
-            //    x.MultipartBodyLengthLimit = 209715200;
-            //});
-
+            
             services.Configure<KestrelServerOptions>(options =>
              {
                  options.AllowSynchronousIO = true;
